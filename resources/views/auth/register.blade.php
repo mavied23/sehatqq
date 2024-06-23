@@ -52,6 +52,19 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <label for="role_id" class="col-md-4 col-form-label text-md-end">{{ __('role') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="role_id" type="number" class="form-control @error('role_id') is-invalid @enderror" name="role_id" required autocomplete="new-role-id">
+
+                                @error('role_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
