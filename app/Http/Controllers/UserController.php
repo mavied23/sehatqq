@@ -11,18 +11,8 @@ class UserController extends Controller
         $users = User::all();
         return view('users.index', compact('users'));
     }
-    public function create(){
-        return view('users.create');
-    }
-    public function store(Request $request){
-        $request->validate([
-            'name'=>'required',
-            'email'=>'required|email|unique:users',
-        ]);
-        User::create($request->all());
-        return redirect()->route('user.create')->with('success', 'User created successfully.');
-    }
-    public function edit($id){
+
+    public function edit(User $user){
         $users = User::all();
         return view('users.edit', compact('user'));
     }
@@ -34,7 +24,7 @@ class UserController extends Controller
         ]);
         $user = User::find($id);
         $user->update($request->all());
-        return redirect()->route('users.index')->with('success', 'User updated successfully.');
+        return redirect()->route('users.index');
     }
     public function destroy($id)
     {
