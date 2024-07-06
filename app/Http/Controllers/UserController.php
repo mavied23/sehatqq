@@ -31,4 +31,22 @@ class UserController extends Controller
         User::find($id)->delete();
         return redirect()->route('users.index')->with('success', 'User deleted successfully.');
     }
+
+
+    public function store(Request $request)
+
+    {
+        $validatedData = $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+ 
+        ]);
+
+        $name = $validatedData['name'];
+        $email = $validatedData['email'];
+
+        return view('halaman');
+    }
 }
+
+

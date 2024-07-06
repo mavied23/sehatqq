@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<button class="btn btn-info btn-sm" onclick="window.location.href = '/home';"><--Kembali ke Home"</button><br><br><br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

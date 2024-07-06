@@ -72,4 +72,5 @@ class RegisterController extends Controller
             'role_id' => 2,
         ]);
     }
+   
 }

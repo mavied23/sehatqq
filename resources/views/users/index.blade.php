@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <button class="btn btn-info btn-sm" onclick="window.location.href = '/home';"><--Kembali ke Home</button><br><br><br>
+    <button class="btn btn-info btn-sm" onclick="window.location.href = '/home';"><--Kembali ke Home"</button><br><br><br>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
