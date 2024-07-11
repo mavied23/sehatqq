@@ -11,159 +11,83 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #95dafa;
         }
-        .navbar .navbar-expand-lg {
-            background-color: #e6f2ff;
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
         }
-        .hero-section {
-            background-color: #141718;
-            padding: 5rem 0;
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            width: 500px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease; 
         }
-        .hero-section .container {
+        .card:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+            transform: translateY(-1px);  
+        }
+        .card-header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
         }
-        .hero-section .hero-text {
-            flex: 1;
-        }
-        .hero-section .hero-image {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-section .hero-image img {
-            max-width: 100%;
-            max-height: 400px;
-        }
-        .hero-section h1 {
-            font-size: 3rem;
+        .card-header .name {
+            font-size: 18px;
             font-weight: bold;
         }
-        .hero-section p {
-            font-size: 1.2rem;
-            color: #555;
+        .card-header .status {
+            display: flex;
+            align-items: center;
         }
-        .service-item {
-            background-color: #aff8fd;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-    
+        .card-header .status i {
+            margin-right: 5px;
         }
-        .service-item h3 {
-            color: #007bff;
-            margin-bottom: 10px;
+        .card-body {
+           margin-bottom: 20px;
         }
-        .service-item p {
-            line-height: 1.6;
+        .card-body p {
+            margin: 0;
+            padding: 10px;
         }
-        .container {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #95dafa;
-            border-radius: 5px;
+        .card-body .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
         }
-
-        .footer {
-            background-color: #5C88C4;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .footer p {
-            font-size: 0.9rem;
-            color: #fff;
-        }
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .btn-halodoc {
-            background-color: #7380bd;
+        .card-footer button {
+            background-color: #ff5733;
             color: #fff;
             border: none;
-            padding: 0.8rem 1.5rem;
+            padding: 10px 20px;
             border-radius: 5px;
-            font-weight: bold;  
-        }
-        .btn-halodoc:hover {
-            background-color: #18ebeb;
             cursor: pointer;
         }
-        .service-item:hover {
-            background-color: #d9eafc;
-            cursor: pointer;
+        .card-footer .price {
+            font-size: 18px;
+            font-weight: bold;
         }
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('../resources/img/obat.jpeg');
-            background-size: cover;
-            background-position: center;
-            z-index: -1; 
+        .doctor-image {
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
         }
-        header {
-            position: relative;
-            text-align: center;
-            padding: 150px 0;
+        .doctor-imagee {
+            width: 350px;
+            height: 150px;
+            margin-right: 20px;
         }
-        @media (max-width: 768px) {
-        .service-item {
-            margin-bottom: 20px;}
-        }
-        @media (max-width: 480px) {
-        .service-item {
-        width: 100%;}
-        }
-        .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .card {
-      width: 200px;
-      height: 150px;
-      margin: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      overflow: hidden;
-      background-size: cover;
-      position: relative;
-    }
-
-    .card-title {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    .lihat-semua {
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-
-    .lihat-semua a {
-      text-decoration: none;
-      color: #007bff;
-      font-weight: bold;
-    }
     </style>
 </head>
 <body>
-    
     <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand" href="#">Sehatqu</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -172,71 +96,381 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Tentang Kami</a>
+                <a class="nav-link" href="/tentang">Tentang Kami</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Kelayakan</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    Logout
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-              </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                
-              </li>
-            </ul>
-          </div>
-            @auth
+                @auth
                  <p style="font-size: 23px;">Selamat datang, {{ Auth::user()->name }}!</p>
             @else
                 @if (session('user_name'))
                     <p>Selamat datang, {{ session('user_name') }}!</p>
                 @endif
             @endauth
+              </li>
+            </ul>
+          </div>
       </nav>
+      <button><a href="{{ url()->previous() }}">Kembali ke halaman sebelumnya</a></button>
+      <h1 style="align-items: center; display: flex; justify-content: space-around; padding: 10px;">Pilih Dokter</h1>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Batuk</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/cap.png" alt="Doctor image" class="doctor-image">
+            <p>OBAT BATUK CAP IBU DAN ANAK SIRUP merupakan obat herbal yang digunakan membantu
+                meredakan batuk berdahak dan membantu melegakan tenggorokan, serta membantu memlihara
+                kesehatan paru-paru.</p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa dan anak >12 Tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button onclick="location.href='{{ url('/konsultasi') }}'">+keranjang</button>
+            <span class="price">Rp 32.900</span>
+          </div>
+        </div>    
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Pereda Nyeri dan Demam</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/pan.png" alt="Doctor image" class="doctor-imagee">
+            <p>PANADOL EXTRA merupakan obat dengan kandungan Paracetamol dan 
+                Caffeine. Obat ini dapat digunakan untuk meringankan sakit 
+                kepala dan sakit gigi. Paracetamol sebagai analgetik, bekerja dengan
+                meningkatkan ambang rasa sakit.
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa dan anak >12 Tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 13.900</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Pereda Nyeri dan Demam</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/sic.png" alt="Doctor image" class="doctor-image">
+            <p>SUMAGESIC TABLET merupakan obat dengan kandungan Paracetamol
+                600 mg. Obat ini dapat digunakan untuk meringankan rasa sakit
+                kepala,gigi, dan menurunkan demam.
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa</div>
+              <div><i class="fas fa-thumbs-up"></i> </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 3.000</span>
+          </div>
+        </div>    
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Pereda Nyeri dan Demam</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/para.png" alt="Doctor image" class="doctor-imagee">
+            <p>SANMOL merupakan obat dengan kandungan Paracetamol 500 mg.
+                Obat ini digunakan untuk meringankan rasa sakit pada
+                keadaan sakit kepala,gigi dan menurunkan demam.
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa dan anak >12 Tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 2.400</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Pencernaan</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/1.png" alt="Doctor image" class="doctor-image">
+            <p>LANSOPRAZOL merupakan obat golongan proton pump inhibitor
+                yang digunakan untuk tukak duodenum dan tukak lambung ringan,
+                tukak peptik, refluks esofagitis, sindrom zollinger-ellison dan 
+                eradikasi.
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa, Dengan petunjuk dokter</div>
+              <div><i class="fas fa-thumbs-up"></i> </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 16.000</span>
+          </div>
+        </div>    
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Diare</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/3.png" alt="Doctor image" class="doctor-image">
+            <p>ORALITE sachet merupakan obat dengan kandungan Natrium 
+                Klorida, Kalium Klorida, Trisodium sitrat dihidrat,Glukosa anhidrat
+                dalam bentuk serbuk. Obat ini digunakan untuk mencegah dan mengobati
+                kurang cairan dehidrasi akibat diare dan muntah.
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dibawah 1 tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 1.100</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Pencernaan</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/2.png" alt="Doctor image" class="doctor-image">
+            <p>GERDILIUM memiliki kandungan Domperdone dalam bentuk tablet.
+                Obat ini merupakan antagonis dopamin yang mempunyai kerja anti-emerik 
+                yang digunakan untuk dispesia fungsional, mual mmuntah.
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa dan anak >12 Tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 64.000</span>
+          </div>
+        </div>    
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Pencernaan</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/3.png" alt="Doctor image" class="doctor-imagee">
+            <p>NEW DIATABS merupakan obat antidiare dengan kandungan Attapulgit 600 mg. 
+                Obat ini dapat digunakan untuk pengobatan simtomatik pada diare non-spesifik, 
+                yaitu diare yang tidak di ketahui dengan jelas.
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa dan anak >12 Tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 3.200</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Batuk</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/4.png" alt="Doctor image" class="doctor-image">
+            <p>OBAT BATUK CAP IBU DAN ANAK SIRUP merupakan obat herbal yang digunakan membantu
+                meredakan batuk berdahak dan membantu melegakan tenggorokan, serta membantu memlihara
+                kesehatan paru-paru.</p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa dan anak >12 Tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 32.900</span>
+          </div>
+        </div>    
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Alergi</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/5.png" alt="Doctor image" class="doctor-image">
+            <p>LERZIN DROPS 15 ML mengandung zat aktif Cetirizine HCI yang merupakan antihistamin
+                yang secara kompetitif dan selektif menghambat reseptor
+                H1 di saluran pencernaan, pembuluh darah,
+                dan saluran pernapasan. 
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa dan anak >12 Tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 38.400</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Flu</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/6.png" alt="Doctor image" class="doctor-image">
+            <p>RHINOS NEO DROPS merupakan obat dengan kandungan Pseudoephendrine
+                HCI. Obat ini dapat digunakan untuk meringankan gejala hidung tersumbat karena flu.
 
-    
-  
-      <a href="{{ url()->previous() }}">Kembali ke halaman sebelumnya</a>
-<br>
-  <h1>Pilih Dokter</h1>
-
-  <div class="container">
-    <div class="">
-      <div class="card-title">Dokter Kandungan</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=2');">
-      <div class="card-title">Dokter Anak</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=3');">
-      <div class="card-title">Dokter THT</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=4');">
-      <div class="card-title">Dokter Paru</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=5');">
-      <div class="card-title">Dokter Mata</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=6');">
-      <div class="card-title">Dokter Kulit</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=7');">
-      <div class="card-title">Dokter Penyakit Dalam</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=8');">
-      <div class="card-title">Dokter Psikiater</div>
-    </div>
-  </div>
-
-  <div class="lihat-semua">
-    <a href="#">Lihat Semua</a>
-  </div>
-
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Anak 2-5tahun </div>
+              <div><i class="fas fa-thumbs-up"></i></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 79.100</span>
+          </div>
+        </div>    
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Batuk dan Flu</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/7.png" alt="Doctor image" class="doctor-image">
+            <p>OBH COMBI ANAK BATUK PLUS FLU MADU  adalah obat batuk dengan rasa madu.
+                Mengandung Paracetamol, yang bekerja sebagai pereda demam sekaligus
+                mengurangi rasa nyeri di kepala.
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>2-5tahun</div>
+              <div><i class="fas fa-thumbs-up"></i></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 19.700</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Flu</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/8.png" alt="Doctor image" class="doctor-image">
+            <p>TRIFEDRIN merupakan obat dengan kandungan Triprolidine HCI dan Pseudoephedrine
+                HCI dalam bentuk sirup. Obat ini digunakan sebagai antihistamin dan
+                dekongestan hidung.
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa dan anak >12 tahun</div>
+              <div><i class="fas fa-thumbs-up"></i></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 34.400</span>
+          </div>
+        </div>    
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Obat Nyeri</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/9.png" alt="Doctor image" class="doctor-image">
+            <p>PARAMEX merupakan obat dengan kandungan Paracetamol,Propyhenazone,
+                Caffeine Dexchlorpheniramine maleate. Obat ini dapat digunakan untuk meringankan
+                sakit kepala dan sakit gigi.
+            </p>
+            <div class="info">
+              <div><i class="far fa-clock"></i>Dewasa dan anak >12 tahun</div>
+              <div><i class="fas fa-thumbs-up"></i></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button>+keranjang</button>
+            <span class="price">Rp 2.800</span>
+          </div>
+        </div>
+      </div>
+      
 </body>
 </html>
+      
+

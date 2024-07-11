@@ -11,159 +11,75 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #95dafa;
         }
-        .navbar .navbar-expand-lg {
-            background-color: #e6f2ff;
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
         }
-        .hero-section {
-            background-color: #141718;
-            padding: 5rem 0;
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 500px;
         }
-        .hero-section .container {
+        .card-header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
         }
-        .hero-section .hero-text {
-            flex: 1;
-        }
-        .hero-section .hero-image {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-section .hero-image img {
-            max-width: 100%;
-            max-height: 400px;
-        }
-        .hero-section h1 {
-            font-size: 3rem;
+        .card-header .name {
+            font-size: 18px;
             font-weight: bold;
         }
-        .hero-section p {
-            font-size: 1.2rem;
-            color: #555;
+        .card-header .status {
+            display: flex;
+            align-items: center;
         }
-        .service-item {
-            background-color: #aff8fd;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-    
+        .card-header .status i {
+            margin-right: 5px;
         }
-        .service-item h3 {
-            color: #007bff;
-            margin-bottom: 10px;
+        .card-body {
+           margin-bottom: 20px;
         }
-        .service-item p {
-            line-height: 1.6;
+        .card-body p {
+            margin: 0;
+            padding: 10px;
         }
-        .container {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #95dafa;
-            border-radius: 5px;
+        .card-body .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
         }
-
-        .footer {
-            background-color: #5C88C4;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .footer p {
-            font-size: 0.9rem;
-            color: #fff;
-        }
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .btn-halodoc {
-            background-color: #7380bd;
+        .card-footer button {
+            background-color: #ff5733;
             color: #fff;
             border: none;
-            padding: 0.8rem 1.5rem;
+            padding: 10px 20px;
             border-radius: 5px;
-            font-weight: bold;  
-        }
-        .btn-halodoc:hover {
-            background-color: #18ebeb;
             cursor: pointer;
         }
-        .service-item:hover {
-            background-color: #d9eafc;
-            cursor: pointer;
+        .card-footer .price {
+            font-size: 18px;
+            font-weight: bold;
         }
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('../resources/img/obat.jpeg');
-            background-size: cover;
-            background-position: center;
-            z-index: -1; 
+        .doctor-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
         }
-        header {
-            position: relative;
-            text-align: center;
-            padding: 150px 0;
-        }
-        @media (max-width: 768px) {
-        .service-item {
-            margin-bottom: 20px;}
-        }
-        @media (max-width: 480px) {
-        .service-item {
-        width: 100%;}
-        }
-        .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .card {
-      width: 200px;
-      height: 150px;
-      margin: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      overflow: hidden;
-      background-size: cover;
-      position: relative;
-    }
-
-    .card-title {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    .lihat-semua {
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-
-    .lihat-semua a {
-      text-decoration: none;
-      color: #007bff;
-      font-weight: bold;
-    }
     </style>
 </head>
 <body>
-    
     <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand" href="#">Sehatqu</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -172,71 +88,161 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Tentang Kami</a>
+                <a class="nav-link" href="/tentang">Tentang Kami</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Kelayakan</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    Logout
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-              </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                
-              </li>
-            </ul>
-          </div>
-            @auth
+                @auth
                  <p style="font-size: 23px;">Selamat datang, {{ Auth::user()->name }}!</p>
             @else
                 @if (session('user_name'))
                     <p>Selamat datang, {{ session('user_name') }}!</p>
                 @endif
             @endauth
+              </li>
+            </ul>
+          </div>
       </nav>
-
-    
-  
-      <a href="{{ url()->previous() }}">Kembali ke halaman sebelumnya</a>
-<br>
-  <h1>Pilih Dokter</h1>
-
-  <div class="container">
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=1');">
-      <div class="card-title" >Dokter Kandungan</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=2');">
-      <div class="card-title">Dokter Anak</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=3');">
-      <div class="card-title">Dokter THT</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=4');">
-      <div class="card-title">Dokter Paru</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=5');">
-      <div class="card-title">Dokter Mata</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=6');">
-      <div class="card-title">Dokter Kulit</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=7');">
-      <div class="card-title">Dokter Penyakit Dalam</div>
-    </div>
-    <div class="card" style="background-image: url('https://picsum.photos/200/150?random=8');">
-      <div class="card-title">Dokter Psikiater</div>
-    </div>
-  </div>
-
-  <div class="lihat-semua">
-    <a href="#">Lihat Semua</a>
-  </div>
-
+      <button><a href="{{ url()->previous() }}">Kembali ke halaman sebelumnya</a></button>
+      <h1 style="align-items: center; display: flex; justify-content: space-around; padding: 10px;">Pilih Dokter</h1>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Dr. Muhammad Fardhan</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span>Dokter Umum</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/doc1.jpeg" alt="Doctor image" class="doctor-image">
+            <p>Dr. Muhammad Fardhan adalah dokter umum,Ia fokus pada diagnosis akurat, perawatan optimal, dan pencegahan penyakit untuk meningkatkan kualitas hidup pasien.</p>
+            <div class="info">
+              <div><i class="far fa-clock"></i> 35 tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> 99%</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button onclick="location.href='{{ url('/konsultasi') }}'">Konsultasi</button>
+            <span class="price">Rp 45.000</span>
+          </div>
+        </div>    
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Dr. Henri</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span>Dokter Anak</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/doc.jpeg" alt="Doctor image" class="doctor-image">
+            <p>Dr. Henri adalah dokter anak berdedikasi,Ia fokus pada diagnosis akurat, perawatan tepat, dan pencegahan penyakit untuk mendukung perkembangan optimal anak-anak.</p>
+            <div class="info">
+              <div><i class="far fa-clock"></i> 25 tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> 100%</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button onclick="location.href='{{ url('/konsultasi') }}'">Konsultasi</button>
+            <span class="price">Rp 100.000</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Dr. Daffa</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span>Dokter Gigi</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/doc2.jpeg" alt="Doctor image" class="doctor-image">
+            <p>Dr. Daffa adalah seorang dokter gigi,Ia fokus pada diagnosis akurat, perawatan tepat, dan pencegahan masalah gigi untuk memastikan kesehatan gigi dan mulut yang optimal bagi pasien.</p>
+            <div class="info">
+              <div><i class="far fa-clock"></i> 16 tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> 99%</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button onclick="location.href='{{ url('/konsultasi') }}'">Konsultasi</button>
+            <span class="price">Rp 45.000</span>
+          </div>
+        </div>    
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Dr. Erik</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span>Dokter Jantung</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/doc3.jpeg" alt="Doctor image" class="doctor-image">
+            <p>Dr. Erik adalah seorang dokter jantung berdedikasi yang memberikan perawatan kardiovaskular dengan keahlian dan ketelitian tinggi. Ia fokus pada diagnosis akurat, perawatan tepat, dan pencegahan penyakit jantung untuk memastikan kesehatan jantung yang optimal bagi pasien.</p>
+            <div class="info">
+              <div><i class="far fa-clock"></i> 25 tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> 100%</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button onclick="location.href='{{ url('/konsultasi') }}'">Konsultasi</button>
+            <span class="price">Rp 100.000</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Dr. Saiful Galuh</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span>Dokter Ginjal</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/doc4.jpeg" alt="Doctor image" class="doctor-image">
+            <p>Dr. Saiful Galuh adalah seorang dokter ginjal berdedikasi yang memberikan perawatan nefrologi dengan keahlian tinggi. Ia fokus pada diagnosis akurat, perawatan tepat, dan pencegahan penyakit ginjal untuk memastikan kesehatan ginjal yang optimal bagi pasien.</p>
+            <div class="info">
+              <div><i class="far fa-clock"></i> 16 tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> 99%</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button onclick="location.href='{{ url('/konsultasi') }}'">Konsultasi</button>
+            <span class="price">Rp 45.000</span>
+          </div>
+        </div>    
+        <div class="card">
+          <div class="card-header">
+            <div class="name">Dr. Amelia</div>
+            <div class="status">
+              <i class="fas fa-user-md"></i>
+              <span>Dokter Kandungan</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <img src="img/doc5.jpeg" alt="Doctor image" class="doctor-image">
+            <p>Dr. Amelia adalah seorang dokter kandungan berdedikasi yang memberikan perawatan kesehatan reproduksi dengan keahlian dan perhatian tinggi. Ia fokus pada diagnosis akurat, perawatan tepat, dan pencegahan masalah kesehatan reproduksi untuk memastikan kesejahteraan optimal bagi pasien.</p>
+            <div class="info">
+              <div><i class="far fa-clock"></i> 25 tahun</div>
+              <div><i class="fas fa-thumbs-up"></i> 100%</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button onclick="location.href='{{ url('/konsultasi') }}'">Konsultasi</button>
+            <span class="price">Rp 100.000</span>
+          </div>
+        </div>
+      </div>
+      
 </body>
 </html>
+      
+

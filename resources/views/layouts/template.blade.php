@@ -62,7 +62,8 @@
         .container {
             margin-top: 30px;
             padding: 20px;
-            background-color: #95dafa;
+            width: 80%;
+
             border-radius: 5px;
         }
 
@@ -123,6 +124,8 @@
         .service-item {
         width: 100%;}
         }
+
+
     </style>
 </head>
 <body>
@@ -134,7 +137,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="{{ 'tentang' }}">Tentang Kami</a>
+                <a class="nav-link" href="/tentang">Tentang Kami</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Kelayakan</a>
@@ -142,52 +145,17 @@
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                @auth
+                 <p style="font-size: 23px;">Selamat datang, {{ Auth::user()->name }}!</p>
+            @else
+                @if (session('user_name'))
+                    <p>Selamat datang, {{ session('user_name') }}!</p>
+                @endif
+            @endauth
               </li>
             </ul>
           </div>
       </nav>
- 
-      <header>
-        <div class="hero-text">
-            <h1>Solusi Kesehatan Terlengkap</h1>
-            <p>Chat dokter, kunjungi toko kesehatan, beli obat,dan update informasi seputar kesehatan, semua bisa di sehatqu!</p><br>
-        </div>
-        <div class="hero-background"></div>
-        <div class="auth-links">
-                <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
-        </div>
-    </header>
-    <br><br>
-    <div class="container">
-        <div class="row">
-          <div class="col-md-4 service-item" onclick="alert('Konsul dengan Dokter Harus Login!')">
-            <h3>Konsultasi dengan Dokter</h3>
-            <p>Konsultasi dengan dokter profesional kapan saja dan di mana saja.</p>
-          </div>
-          <div class="col-md-4 service-item" onclick="alert('Toko Kesehatan Harus Login!')">
-            <h3>Toko Kesehatan</h3>
-            <p>Beli obat dan alat kesehatan dengan mudah dan aman.</p>
-          </div>
-          <div class="col-md-4 service-item" onclick="alert('Info Terkini Kesehatan Harus Login!')">
-            <h3>Info Terkini Kesehatan</h3>
-            <p>Nantikan info terkini pada dunia kesehatan.</p>
-          </div>
-        </div>
-      </div>
-      
-      <br><br><br><br><br><br>
-
-    
-
-    <footer class="footer">
-        <p>© 2024 Sehatqu Apotik Online. All rights reserved.</p>
-        <p><a href="#">Tentang Kami</a> | <a href="#">Kebijakan Privasi</a> | <a href="#">Hubungi Kami</a></p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      @yield('template')
 </body>
 </html>
